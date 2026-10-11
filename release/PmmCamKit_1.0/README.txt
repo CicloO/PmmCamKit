@@ -1,4 +1,4 @@
-﻿PmmCamKit 0.2
+﻿PmmCamKit 1.0
 MMD 工程（PMM）相机工具 / MMD プロジェクト（PMM）用カメラツール / Camera tools for MMD projects (PMM)
 https://github.com/CicloO/PmmCamKit
 
@@ -98,8 +98,3 @@ Command line (for shortcuts): PmmCamKit.exe --render target.pmm --rig rig.pmm
 ----------------------------------------------------------------------
 PMM format reference: Scallion (MIT, github.com/paralleltree/Scallion)
 
-Changes in 0.2
-- Camera rigs are detected and checked by default; binding targets are matched by bone name automatically.
-- Binding table shows source model/bone, who uses it, frame range and key count; mid-way target changes get separate rows.
-- Writes a matching .emm with the new models registered (fixes the MME "cannot get effect assignment" warning).
-- UI in Chinese / Japanese / English; layout fixed for high-DPI displays.

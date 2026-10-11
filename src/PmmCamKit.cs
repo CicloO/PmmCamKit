@@ -12,8 +12,8 @@ using System.Windows.Forms;
 [assembly: AssemblyProduct("PmmCamKit")]
 [assembly: AssemblyDescription("MMD PMM camera tools: merge camera rigs, batch camera bone follow")]
 [assembly: AssemblyCopyright("CicloO")]
-[assembly: AssemblyVersion("0.2.0.0")]
-[assembly: AssemblyFileVersion("0.2.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 
 namespace PmmCamKit
 {
@@ -25,7 +25,7 @@ namespace PmmCamKit
 
     class MainForm : Form
     {
-        public const string Version = "0.2";
+        public const string Version = "1.0";
 
         // 切换语言时重新执行的设置文字动作
         readonly List<Action> texts = new List<Action>();
