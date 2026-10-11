@@ -42,7 +42,7 @@ namespace PmmCamKit
         List<ExternalRef> refs = new List<ExternalRef>();
         readonly Dictionary<int, string> pathOverride = new Dictionary<int, string>();
         bool loading;
-        const int ColTargetModel = 6, ColTargetBone = 7;
+        const int ColTargetModel = 5, ColTargetBone = 6, ColMatch = 7;
 
         // ---- 追踪页 ----
         readonly RadioButton rbForward = new RadioButton(), rbAll = new RadioButton();
@@ -278,9 +278,9 @@ namespace PmmCamKit
             col("被谁引用", "参照元", "Used by", 18, 100, true);
             col("帧范围", "フレーム範囲", "Frames", 10, 70, true);
             col("关键帧数", "キー数", "Keys", 7, 72, true).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            col("匹配", "一致", "Match", 14, 80, true);
             col("目标模型", "割り当て先モデル", "Target model", 18, 110, false);
             col("目标骨骼", "割り当て先ボーン", "Target bone", 12, 90, false);
+            col("匹配", "一致", "Match", 14, 80, true);
             grid.CurrentCellDirtyStateChanged += (o, e) => { if (grid.IsCurrentCellDirty) grid.CommitEdit(DataGridViewDataErrorContexts.Commit); };
             grid.CellValueChanged += GridValueChanged;
             grid.DataError += (o, e) => { e.ThrowException = false; };
@@ -431,8 +431,8 @@ namespace PmmCamKit
                     string.Join(nl, r.Users.Select(u => u.Who)),
                     string.Join(nl, r.Users.Select(u => u.Range)),
                     string.Join(nl, r.Users.Select(u => u.KeyCount.ToString())),
-                    r.Match, null, null);
-                if (r.Kind != MatchKind.SameModel) grid.Rows[i].Cells[5].Style.ForeColor = Color.FromArgb(176, 96, 0);
+                    null, null, r.Match);
+                if (r.Kind != MatchKind.SameModel) grid.Rows[i].Cells[ColMatch].Style.ForeColor = Color.FromArgb(176, 96, 0);
                 SetRowTarget(grid.Rows[i], r);
             }
             loading = false;
