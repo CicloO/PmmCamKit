@@ -3,3 +3,5 @@ dev/
 # Local build output of src/build.bat
 build/
 __pycache__/
+# Packaged builds - published on GitHub Releases, not in the repo
+release/

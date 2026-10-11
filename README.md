@@ -10,11 +10,17 @@ MMD プロジェクト用カメラツール：カメラボーンを統合先プ�
 
 ## Download
 
-See [`release/`](release/) — each version folder contains `PmmCamKit.exe` and a trilingual `README.txt`.
+Get the latest version from [Releases](https://github.com/CicloO/PmmCamKit/releases/latest): download `PmmCamKit_<version>.zip`, unzip, and double-click `PmmCamKit.exe`. Usage (中文 / 日本語 / English): [`docs/README.txt`](docs/README.txt).
 
 ## Build
 
 Run `src/build.bat` (uses the C# compiler bundled with Windows). Output: `build/PmmCamKit.exe`.
+
+Repository layout: `src/` source, `docs/` the user guide shipped in the zip, `LICENSE`.
+
+## License
+
+[MIT](LICENSE) © 2026 CicloO
 
 ## Credits
 
