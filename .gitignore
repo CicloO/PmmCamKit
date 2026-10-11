@@ -1,0 +1,5 @@
+# Local development files (test scripts, project copies, logs) - keep local only
+dev/
+# Local build output of src/build.bat
+build/
+__pycache__/
